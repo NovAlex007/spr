@@ -1,0 +1,20 @@
+Sub my()
+Dim s1 As String
+Dim s2 As String
+Dim s1_ As String
+Dim s2_ As String
+For i = 2 To 17
+    Worksheets("5этаж").Activate
+    s1 = "E" + CStr(i)
+    s1_ = Range(s1)
+    For j = 2 To 135
+        Worksheets("Список").Activate
+        s2 = "d" + CStr(j)
+        s2_ = Range(s2)
+            If (s1_ = s2_) Then
+                s2 = "h" + CStr(j)
+                Range(s2) = 5
+            End If
+    Next j
+ Next i
+End Sub
